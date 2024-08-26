@@ -95,8 +95,8 @@ services:
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
       - ./nginx/ssl:/etc/nginx/ssl
-      # - ./client/dist/spa:/static
-      # - ./client/dist/spa/index.html:/etc/nginx/html/index.html
+      - ./client/dist/spa:/static
+      - ./client/dist/spa/index.html:/etc/nginx/html/index.html
     depends_on:
       - server
     networks:
